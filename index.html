@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="app">
+
+        <div class="container">
+
+            <h1>Prenota ora PS5 per giocare questi giochi in esclusiva</h1>
+
+            <div class="box">
+    
+                <i class="fas fa-chevron-circle-left prev" @click="prevImg"></i>
+    
+                <div class="box-img">
+                    <img v-if="counterImg === index" v-for=" (image, index) in images " :src="image" alt="">
+                    
+                </div>
+                
+                <i class="fas fa-chevron-circle-right next" @click="nextImg"></i>
+
+                <nav>
+                    <i class="far fa-circle" 
+                    :class="(counterImg === index) ? 'active' : null" 
+                    v-for=" (image, index) in images"
+                    @click="counterImg=index"
+                    ></i>
+                   
+                </nav>
+    
+            </div>
+    
+           
+    
+        </div>
+
+    </div>
+   
+
+    
+    <script src="assets/js/script.js"></script>
+    
+</body>
+</html>

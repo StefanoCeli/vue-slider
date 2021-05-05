@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('../img/playstation-5-13.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+}
+.container h1{
+    margin-bottom: 50px;
+    font-size: 50px;
+    color: #fff;
+   
+}
+.box{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.box > i{
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.box i.prev{
+    right: 101%;
+}
+.box i.next{
+    left: 101%;
+}
+.box img{
+    width: 100%;
+    border: 5px solid #fff;
+}
+nav{
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform:translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav i{
+margin: 0 15px;
+color: #fff;
+cursor: pointer;
+border-radius: 50%;
+}
+nav i:hover{
+background-color: #fff;
+}
+nav i.active{
+background-color: #003cbe;
+}
