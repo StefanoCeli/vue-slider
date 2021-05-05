@@ -4,10 +4,10 @@
     padding: 0;
 }
 body{
+    font-family: 'Play', sans-serif;
     background-image: url('../img/playstation-5-13.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
 }
 .container{
     height: 100vh;
@@ -15,12 +15,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.3);
 }
 .container h1{
     margin-bottom: 50px;
     font-size: 50px;
     color: #fff;
+    text-shadow: 5px 5px 10px #000;
    
 }
 .box{
@@ -28,6 +29,7 @@ body{
     position: relative;
     display: flex;
     align-items: center;
+    
 }
 .box > i{
     position: absolute;
@@ -41,9 +43,13 @@ body{
 .box i.next{
     left: 101%;
 }
+.box-image{
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px 1px #bbb;
+}
 .box img{
     width: 100%;
-    border: 5px solid #fff;
+    vertical-align:bottom;
 }
 nav{
     height: 50px;
@@ -58,14 +64,14 @@ nav{
     align-items: center;
 }
 nav i{
-margin: 0 15px;
-color: #fff;
-cursor: pointer;
-border-radius: 50%;
+    margin: 0 15px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
 }
 nav i:hover{
-background-color: #fff;
+    background-color: #fff;
 }
 nav i.active{
-background-color: #003cbe;
+    background-color: #003cbe;
 }
